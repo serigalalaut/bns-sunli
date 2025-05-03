@@ -1,0 +1,27 @@
+version : '3'
+networks:
+  bns-net:
+    external:
+      name: bns-net
+services:
+  nginx:
+      image: nginx:stable
+      container_name: bns-sunli-nginx
+      ports:
+        - "8000:80"
+      volumes:
+        - ./bns-sunli.io/:/var/www/html/
+        - ./bns-sunli.conf:/etc/nginx/conf.d/default.conf
+      external_links:
+        - bns-sunli
+      networks:
+        - bns-net
+  php_bns:
+      build: ./php
+      container_name: bns-sunli
+      volumes:
+        - ./bns-sunli.io/:/var/www/html/
+      networks:
+        - bns-net
+      
+  
