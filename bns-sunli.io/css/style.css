@@ -87,7 +87,7 @@ a:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url(../images/hero-bg.jpg);
+  background-image: url(../images/slider.png);
   background-size: cover;
 }
 
@@ -96,7 +96,7 @@ a:focus {
 }
 
 .sub_page .header_section .header_bottom {
-  background-color: #252525;
+  background-color: #FFF;
 }
 
 .header_section {
@@ -484,7 +484,7 @@ a:focus {
 }
 
 .slider_section .carousel_btn-box a:hover {
-  background-color: #da7426;
+  background-color: #abdd45;
   color: #ffffff;
 }
 
